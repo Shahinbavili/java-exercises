@@ -1,0 +1,33 @@
+package yash_yaser;
+
+enum Size {
+    LARGE, MEDIUM, SMALL
+}
+
+public class Draft_demo {
+
+    static Size result_1 = Size.SMALL;
+    static Size result_2 = Size.MEDIUM;
+    static Size result_3 = Size.LARGE;
+
+    static Size my_method(String a) {
+        switch (a) {
+            case "small":
+                return result_1;
+            case "middle":
+                return result_2;
+            case "big":
+                return result_3;
+            default:
+                return result_1;
+        }
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        Size result = Draft_demo.my_method("small");
+        System.out.println(result);
+    }
+}
